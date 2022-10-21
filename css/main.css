@@ -1,0 +1,111 @@
+*,*::before, *::after {box-sizing: border-box;}
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-color: #1e1f23;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Animacion Mi King  */
+.loader
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader span
+{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: #1e1f23;
+    border-radius: 50%;
+    box-shadow: 12px 12px 24px #1a1a1e, -12px -12px 24px #232428;
+    overflow: hidden;
+    /* border:  9px solid #1e1f23; */
+    
+}
+.loader span::before
+{
+    content: '';
+    position: absolute;
+    inset: 40px;
+    background: url(../assets/img/me.png);
+    background-size: 102%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 3px 3px 30px #1a1a1e, -3px -3px 40px #232428;
+    border:  1px solid #565656;
+    z-index: 1;
+
+}
+.loader:hover{
+    animation: yope 21s linear infinite;
+    cursor: pointer;
+}
+.loader span i
+{
+    margin:8px;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#42abff, #ff4f8b, #ffeb3b);
+    border-radius:50% ;
+    filter: blur(6px);
+    animation: malo-si-no-me-sigues 1s linear infinite;
+}
+.text
+{
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    animation: textoAnimado 21s linear infinite;
+}
+.text b
+{
+    position: absolute;
+    left: 50%;
+    top: 1px;
+    display: block;
+    transform-origin: 0 170px ;
+    font-weight: normal;
+    font-size: 6;
+    font-weight: bold;
+    filter: drop-shadow(5px 5px 5px rgb(165, 165, 165));
+}
+/* Animacion-Circle */
+@keyframes malo-si-no-me-sigues{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* Animacion-Letra */
+@keyframes textoAnimado{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+/* Animación- Foto */
+@keyframes yope{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/*  Sudos  No olviden comentar yope si leeron esto ;v*/
